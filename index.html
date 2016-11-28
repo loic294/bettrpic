@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>BetterPic!</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+        
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    	<meta name="apple-mobile-web-app-capable" content="yes" />
+    	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    	<link rel="apple-touch-icon" href="/logo.jpg"/>
+        
+        <link rel="apple-touch-startup-image" href="/logo.jpg" />
+		    	
+        
+        <script type="text/javascript" src="jquery-2.0.0.min.js"></script>
+
+		<script type="text/javascript" src="jquery.touchSwipe.min.js"></script>  
+		<script type="text/javascript" src="jquery.transit.min.js"></script>
+        
+		<link rel="stylesheet" href="css/d.css">
+        
+        <script src="articles/tutos.js"></script>
+        
+		<script language="JavaScript" src="jQuery-webcam-master/jquery.webcam.js"></script>
+
+        
+       <script language="JavaScript" src="lang/lang.js"></script>
+       
+       <!-- The JavaScript -->
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/intro.js"></script>
+        
+        <link rel="stylesheet" href="css/jquerytour.css">
+       
+        
+</head>
+<body>
+
+
+<!-- Start portrait mode -->
+<div class="portrait">
+<nav class="topbar">
+	<a href="#"><div class="leftbutton home left" etat="home"></div></a>
+    <a href="#"><div class="rightbutton home right" etat="home"></div></a>
+    <h2 class="inboxtext"><script>document.write(lang.AppName);</script></h2>
+</nav>
+
+
+	<div class='touch-trigger'></div>
+	<div class="container">
+       
+		  <div style='clear:both;'></div>
+		 <a href="#"><div id="compose"></div></a>
+         
+       
+         
+ 
+         <div id="gridcontainer" etat="close">
+
+           <h2  data-id="2"><script>document.write(lang.sujet);</script><img src="img/ok.png"/></h2>
+                     <div class="step-container step-cont-2">
+							<div class="sMenu">
+                			</div>
+                            
+                     </div>
+                     
+                     <h2  data-id="3"><script>document.write(lang.pSujet);</script><img src="img/ok.png"/></h2>
+                     <div class="step-container step-cont-3">
+						<div class="padding">
+                        
+                        	<div class="of ofc2">
+                            	<div class="left gauche"><script>document.write(lang.gauche);</script></div>
+                                <div class="left droite"><script>document.write(lang.droite);</script></div>
+                                <div style="clear:both;"></div>
+                            </div>
+              
+                            
+                        </div>
+                     </div>
+                     <h2  data-id="4"><script>document.write(lang.distance);</script><img src="img/ok.png"/></h2>
+                     <div class="step-container step-cont-4">
+						<div class="padding">
+							<input type="range" class="change" max="1" min="0" step="1" style="width: 100%;">
+                            <div class="imgLayer l32">
+    								<img src="img/169.png"/> 
+                            </div>
+                            
+                            <div class="imgD">
+                            <a id="imgDownload" href="" title="image" download="picture" >
+                            	<button class=""><script>document.write(lang.download);</script></button>
+                            </a>
+                            
+                            <button class="Rprendre"><script>document.write(lang.reprendre);</script></button>
+                            
+                            </div>
+                            
+                            <div class="nBtn">
+                            <button class="prendreP"><script>document.write(lang.tP);</script></button>
+                            <button class="choseP"><script>document.write(lang.cP);</script></button>
+                            </div>
+                            
+                            <input type="file"  onchange="readURL(this)" class="imgSelect" style="visibility:hidden;"  accept="image/*" />
+                            
+                            
+                        </div>
+                     </div>
+</div>
+         </div>
+		 
+   
+         
+         
+  <div id="gris" etat="close">
+        
+        	<div class="tutopaddingGris">
+            	<div class="tutocontentGris"></div>
+                <div class="ssTitreGris"></div>
+                <button class="start"><script>document.write(lang.suivant);</script></button>
+            </div>
+            
+            <div class="conseil">
+            	<h2><script>document.write(lang.cR);</script></h2>
+            	<button class="conseilOpen"><script>document.write(lang.ouvrir);</script></button>
+            </div>
+   </div>
+        
+	
+		<div id="scenecontainer">
+        
+        
+			
+			<div class="sceneselect">
+				<script>
+					for (i=0; i<5; i++) {
+						document.write(
+							"<div class='scenes' numberId='" + i + "'>" + scenes[i].titre + "</div>"
+						);
+					}
+				</script>
+			</div>
+			
+			<div class="scenedisplay 1"></div>
+		</div>
+		 <div class='scenetouch'></div>
+
+
+        
+  <div id="tutoframe">
+            <div id="tutolist"></div>
+            <a class="linkAlex" href="#" target="new">
+            	<div class="alexandre">
+           	    	<img src="img/alex.jpg" class="imgAlex left"/> 
+                    <div class="alexText left"><span><script>document.write(lang.tAlex);</script></span><br><script>document.write(lang.vOriginal);</script></div>
+                </div>
+            </a>
+            <div class="tutopadding">
+            	<div class="tutocontent"></div>
+                <div class="marginauto">
+                	<button class="nextBtn next"><script>document.write(lang.suivant);</script></button>
+                </div>
+            </div>
+        </div>
+		
+        
+  
+</div>
+</div> 
+<!-- End portrait mode -->
+
+<div class="scrolly">
+
+<div id="webcam"></div>
+
+
+<div id='theimg'>
+	<img class="noclass" src="img/169.png" title="16/9" />
+</div> 
+
+
+
+<div class="imgLayer l2"></div> 
+<div id="cams"></div>
+<div class="tips">
+	<div class="p">
+		<h2><script>document.write(lang.conseils);</script></h2>
+		<p><script>document.write(lang.xConseil);</script></p>
+        
+    </div>
+</div>
+
+</div>
+
+
+
+ 
+ 
+ <!-- Start landscape mode  -->
+ <div class="landscape">
+ 
+ 		<div id="imgdisplay">
+
+				<canvas id="canvas" width="200" height="200"></canvas>
+				<div id="output" style="width:200px; overflow-x:auto;"></div>
+            
+		  	<div id='selection-menu'>
+			 	<a href='#' title="Sélectionner une image"><li id="chose"></li></a>
+                <a href='#' title="Rotate"><li class="rotate"></li></a>
+                <a href='#'><li class="turn"></li></a>
+                <a href="#" title="Detecter les visages"><li id="try"></li></a>
+			</div>
+        	
+         
+          
+          <div id="download"></div>
+          
+          <div class="cropsection">
+          	<button id="crop"></button><br>
+          	<button id="bigger"></button><br>
+          	<button id="smaller">-</button>
+          </div>
+
+            
+   </div>
+ 
+ </div>
+ 
+
+<!-- End landscape mode -->
+
+<script src="js/principal.js"></script> 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47016869-3', 'lbacreaations.com');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+</html>
